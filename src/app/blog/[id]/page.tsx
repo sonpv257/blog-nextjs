@@ -1,7 +1,7 @@
-import JSON_POSTS from '@/data/data.json';
-import { notFound } from 'next/navigation';
-import Head from 'next/head';
-import moment from 'moment';
+import JSON_POSTS from "@/data/data.json";
+import { notFound } from "next/navigation";
+import Head from "next/head";
+import moment from "moment";
 
 export async function generateStaticParams() {
   return JSON_POSTS.map((post) => ({
@@ -10,11 +10,11 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
-  const post = JSON_POSTS.find(post => post.id.toString() === params.id);
+  const post = JSON_POSTS.find((post) => post.id.toString() === params.id);
 
   if (!post) {
     return {
-      title: 'Post Not Found',
+      title: "Post Not Found",
     };
   }
 
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 export default function PostDetail({ params }: { params: { id: string } }) {
-  const post = JSON_POSTS.find(post => post.id.toString() === params.id);
+  const post = JSON_POSTS.find((post) => post.id.toString() === params.id);
 
   if (!post) {
     notFound();
@@ -40,9 +40,9 @@ export default function PostDetail({ params }: { params: { id: string } }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>   
+      <main>
         <div className="flex justify-center text-gray-500">
-          {moment(post.created_at).format('DD-MM-YYYY')}
+          {moment(post.created_at).format("DD-MM-YYYY")}
         </div>
         <div className="text-white flex justify-center text-4xl py-4">
           {post.title}

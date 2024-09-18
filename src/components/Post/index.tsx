@@ -5,9 +5,9 @@ export type PostType = {
   created_at: string;
 };
 
-import Link from 'next/link';
-import JSON_POSTS from '@/data/data.json';
-import moment from 'moment';
+import Link from "next/link";
+import JSON_POSTS from "@/data/data.json";
+import moment from "moment";
 
 export const Post = () => (
   <>

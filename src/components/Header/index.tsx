@@ -10,9 +10,9 @@ export const Header = ({ blogName }: { blogName: string }) => {
         </Link>
         <div className="flex gap-4">
           <Link href={"/category"}>Category</Link>
-          <Link href={"/news"}>News</Link >
-          <Link href={"/about"}>About</Link >
-          <Link href={"/contact"}>Contact</Link >
+          <Link href={"/news"}>News</Link>
+          <Link href={"/about"}>About</Link>
+          <Link href={"/contact"}>Contact</Link>
         </div>
       </div>
     </header>

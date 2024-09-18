@@ -1,5 +1,5 @@
-import { Post } from '../components/Post/index';
-import Head from 'next/head';
+import { Post } from "../components/Post/index";
+import Head from "next/head";
 
 export default function Home() {
   return (

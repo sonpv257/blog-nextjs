@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
-import { Header } from '../Header';
-import { Footer } from '../Footer';
+import { ReactNode } from "react";
+import { Header } from "../Header";
 
 export const Main = ({ children }: { children: ReactNode }) => (
   <>
@@ -8,6 +7,5 @@ export const Main = ({ children }: { children: ReactNode }) => (
     <main className="bg-slate-900 min-h-screen">
       <div className="container lg:px-56 px-4">{children}</div>
     </main>
-    <Footer />
   </>
 );

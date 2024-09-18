@@ -1,5 +1,5 @@
-import { PostType } from './index';
-import moment from 'moment';
+import { PostType } from "./index";
+import moment from "moment";
 
 type PostDetailProps = {
   post: PostType;
@@ -8,7 +8,7 @@ type PostDetailProps = {
 export const PostDetail = ({ post }: PostDetailProps) => (
   <>
     <div className="flex justify-center text-gray-500">
-      {moment(post.created_at).format('DD-MM-YYYY')}
+      {moment(post.created_at).format("DD-MM-YYYY")}
     </div>
     <div className="text-white flex justify-center text-4xl py-4">
       {post.title}
