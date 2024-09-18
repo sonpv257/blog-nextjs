@@ -1,7 +1,7 @@
 import Link from "next/link";
 export const Header = ({ blogName }: { blogName: string }) => {
   return (
-    <header className="py-5">
+    <header className="py-5  bg-black">
       <div className="flex justify-between text-white">
         <Link href={"/"}>
           <div className="text-2xl flex pl-2">
